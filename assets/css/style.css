@@ -1,29 +1,59 @@
+* {
+    box-sizing: border-box;
+    border: solid blue 1px;
+}
+
+body {
+    background-image: url("../../assets/images/background.jpg");
+    height: 100%;
+    width: 100%;
+    display: block;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
 .title {
     font-size: 3rem;
     padding: 0 10px;
     display: inline-block;
+    margin-left: 425px;
+}
 
+header {
+    margin: 50px;
 }
 
 h1 {
     font-weight: 700;
     margin: 0;
     line-height: 1.25;
+    
+}
+
+.container {
+    height: 200px;
+    position: absolute;
+    width: 100%;
+    
 }
 
 select {
     display: inline-block;
     position: relative;
     width: 200px;
+    font-size: 25px;
 }
 
-.cities {
-    display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    min-width: 160px;
+.city-selection {
+    margin: 50px 100px;
+}
+
+label {
+    font-size: 35px;
 }
 #cities {
-    font-size: 2rem;
+    font-size: 35px;
     color: black;
+    font-weight: 100;
 }
