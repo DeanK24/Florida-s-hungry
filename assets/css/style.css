@@ -2,7 +2,7 @@
     box-sizing: border-box;
     border: solid blue 1px;
 }
-
+/*title*/
 body {
     background-image: url("../../assets/images/background.jpg");
     height: 100%;
