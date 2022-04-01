@@ -1,0 +1,29 @@
+.title {
+    font-size: 3rem;
+    padding: 0 10px;
+    display: inline-block;
+
+}
+
+h1 {
+    font-weight: 700;
+    margin: 0;
+    line-height: 1.25;
+}
+
+select {
+    display: inline-block;
+    position: relative;
+    width: 200px;
+}
+
+.cities {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+}
+#cities {
+    font-size: 2rem;
+    color: black;
+}
