@@ -30,7 +30,7 @@ h1 {
 
 .container {
     display: flex;
-    padding: 0px 100px;
+    padding: 0px 50px;
     justify-content:space-around;
     margin-top: 50px;
 }
@@ -56,12 +56,12 @@ h3 {
 
 .select-drop {
     padding: 5px;
-    width: 75%;
+    width: 60%;
     position: relative;
     color: white;
     text-shadow: 0 0 30px #1b1b15, 0 0 5px #fdfa53;
     margin-top: -10px;
-    
+    display: inline;
 }
 
 .select-drop select {
@@ -70,7 +70,20 @@ h3 {
     font-size: 1.3rem;
     margin-top: 15px;
     border-radius: 10px;
+    letter-spacing: .5px;
 }
+
+/* .btn {
+    width: 75px;
+    font-size: 1.0rem;
+    height: 40px;
+    margin-top: 12px;
+    border-radius: 10px;
+}
+
+.btn:hover {
+    background-color: #a9b8b8;
+} */
 
 .cuisine-list-container {
     margin: 50px 75px;
@@ -83,7 +96,7 @@ h3 {
 }
 
 .hide {
-    /* display: none; */
+    display: none;
 }
 
 .cuisine-card {

@@ -19,26 +19,28 @@
             <h3>Choose a City:</h3>
         </div>
         <div class="select-drop">
-            <select name="city-box" id="CityList">
-                <option value="Selectoption">Select a city to eat!</option>
-                <option value="Tampa">Tampa</option>
-                <option value="Orlando">Orlando</option>
-                <option value="Miami">Miami</option>
-                <option value="Tallahassee">Tallahassee</option>
-                <option value="Jacksonville">Jacksonville</option>
+            <select name="city-box" id="cityList" onchange="getList()">
+                <option>Select a city to eat!</option>
+                <option class="drop" value="Tampa">&#160Tampa</option>
+                <option class="drop" value="Orlando">&#160Orlando</option>
+                <option class="drop" value="Miami">&#160Miami</option>
+                <option class="drop" value="Tallahassee">&#160Tallahassee</option>
+                <option class="drop" value="Jacksonville">&#160Jacksonville</option>
             </select>
         </div>
+        <!-- <button id="submit" class="btn">Submit</button> -->
     </main>
     <div class="cuisine-list-container hide">
         <h4 class="cuisine-title">Pick a delicious cuisine to try!</h4>
-        <div class="cuisine-card">
-            <div class="cards hide">American Cuisine</div>
-            <div class="cards hide">Asian Cuisine</div>
-            <div class="cards hide">Italian Cuisine</div>
-            <div class="cards hide">Latin Cuisine</div>
-            <div class="cards hide">Mediterranean Cuisine</div>
+        <div class="cuisine-card hide" id="selectFood">
+            <div class="cards" id="american">American Cuisine</div>
+            <div class="cards" id="asian">Asian Cuisine</div>
+            <div class="cards" id="italian">Italian Cuisine</div>
+            <div class="cards" id="latin">Latin Cuisine</div>
+            <div class="cards" id="med">Mediterranean Cuisine</div>
         </div>
-        
     </div>
+
+    <script src="./assets/js/script.js"></script>
 </body>
 </html>
