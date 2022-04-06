@@ -1,59 +1,123 @@
 * {
-    box-sizing: border-box;
-    border: solid blue 1px;
-}
-/*title*/
-body {
-    background-image: url("../../assets/images/background.jpg");
-    height: 100%;
-    width: 100%;
-    display: block;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: 100% 100%;
-}
+    margin: 0;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /* border: 1px solid blue; */
 
-.title {
-    font-size: 3rem;
-    padding: 0 10px;
-    display: inline-block;
-    margin-left: 425px;
 }
 
 header {
-    margin: 50px;
+    background-image: url("../images/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+body {
+    background-color: #eaeff3;
+
 }
 
 h1 {
-    font-weight: 700;
-    margin: 0;
-    line-height: 1.25;
-    
+    color: white;
+    margin: 100px;
+    margin-left: 300px;line-height: 1.25;
+    padding: 0 10px;
+    display: inline-block;
+    font-size: 3rem;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    text-shadow: 0 0 30px #1b1b15, 0 0 5px #fdfa53;
 }
 
 .container {
-    height: 200px;
-    position: absolute;
-    width: 100%;
+    display: flex;
+    padding: 0px 50px;
+    justify-content:space-around;
+    margin-top: 50px;
+}
+
+.form-container {
+    width: 30%;
+    text-align: center;
+    margin: 10px 5px;
     
 }
 
-select {
-    display: inline-block;
-    position: relative;
-    width: 200px;
-    font-size: 25px;
-}
-
-.city-selection {
-    margin: 50px 100px;
-}
-
-label {
-    font-size: 35px;
-}
-#cities {
-    font-size: 35px;
+h3 {
+    font-size: 1.5rem; 
+    letter-spacing: 2px;
+    font-weight: lighter;
+    border-radius: 10px;
+    height: 35px;
+    padding-top: 10px;
     color: black;
-    font-weight: 100;
+    text-shadow: 0 0 30px #15191b, 0 0 5px #92a0a0;
+}
+
+
+.select-drop {
+    padding: 5px;
+    width: 60%;
+    position: relative;
+    color: white;
+    text-shadow: 0 0 30px #1b1b15, 0 0 5px #fdfa53;
+    margin-top: -10px;
+    display: inline;
+}
+
+.select-drop select {
+    height: 45px;
+    width: 100%;
+    font-size: 1.3rem;
+    margin-top: 15px;
+    border-radius: 10px;
+    letter-spacing: .5px;
+}
+
+/* .btn {
+    width: 75px;
+    font-size: 1.0rem;
+    height: 40px;
+    margin-top: 12px;
+    border-radius: 10px;
+}
+.btn:hover {
+    background-color: #a9b8b8;
+} */
+
+.cuisine-list-container {
+    margin: 50px 75px;
+    font-size: 1.5rem;
+}
+
+.cuisine-title {
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+}
+
+.hide {
+    display: none;
+}
+
+.cuisine-card {
+    display: flex;   
+    padding-top: 10px;
+}
+
+.cards {
+    flex-direction: row;
+    font-size: 1.0rem;
+    letter-spacing: 1px;
+    border: 1px solid black;
+    height: 50px;
+    text-align: center;
+    width: 70%;
+    margin: 10px 3px;
+    padding: 10px 5px;
+    transition: .4s ease-out;
+    border-radius: 10px;
+}
+
+.cards:hover {
+    color: white;
+    background-color: black;
 }
