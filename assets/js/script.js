@@ -6,6 +6,7 @@ var italianBtn = document.getElementById("italian");
 var latinBtn = document.getElementById("latin");
 var medBtn = document.getElementById("med");
 var restList = document.querySelector(".rest-list");
+var listContainer = document.getElementById("list-of-rest");
 
 
 
@@ -14,14 +15,12 @@ function getList() {
     console.log(document.getElementById("cityList").value);
     cuisineList.classList.remove("hide");
     cuisineCards.classList.remove("hide");
-    
 }
 
-// Submit btn
+// Submit btn for each cuisine
 americanBtn.addEventListener("click", function() {
     console.log("clicked american");
     restList.classList.remove("hide");
-    
 })
 
 asianBtn.addEventListener("click", function() {
@@ -46,8 +45,8 @@ medBtn.addEventListener("click", function() {
 
 
 var getFood = function() {
-
-    // fetching API data
+    
+    //fetching Tampa API data
     const options = {
         method: 'GET',
         headers: {
@@ -55,13 +54,59 @@ var getFood = function() {
             'X-RapidAPI-Key': '92770b5242msh55597f4b80a9589p12300fjsn73394d0d3c5f'
         }
     };
-
-    fetch('https://travel-advisor.p.rapidapi.com/restaurants/list-by-latlng?latitude=30.3322&longitude=-81.6557&limit=30&currency=USD&distance=20&open_now=false&lang=en_US&min_rating=5', options)
+    
+    fetch('https://travel-advisor.p.rapidapi.com/restaurants/list-by-latlng?latitude=27.9506&longitude=-82.4572&limit=30&currency=USD&distance=20&open_now=false&lang=en_US&min_rating=5', options)
         .then(response => response.json())
-        .then(response => console.log(response))
+        .then(response => {
+            console.log(response)
+            for (var i = 0; i < 5; i++) {
+                var node = document.createElement("li")
+                var textNode = document.createTextNode(response.data[i].name)
+                node.appendChild(textNode)
+                listContainer.appendChild(node);
+            }
+        })
         .catch(err => console.error(err));
-
-
-
-}
+    
+    
 getFood();
+
+
+
+
+
+//fetch Jacksonville API    
+// fetch('https://travel-advisor.p.rapidapi.com/restaurants/list-by-latlng?latitude=30.3322&longitude=-81.6557&limit=30&currency=USD&distance=20&open_now=false&lang=en_US&min_rating=5', options)
+// .then(response => response.json())
+// .then(response => {
+//     console.log(response)
+//     for (var i = 0; i < 5; i++) {
+//         var node = document.createElement("li")
+//         var textNode = document.createTextNode(response.data[i].name)
+//         node.appendChild(textNode)
+//         listContainer.appendChild(node);
+//     }
+// })
+// .catch(err => console.error(err));
+// }
+
+
+
+// var getRest = function (){
+//     fetch("https://api.yelp.com/v3/transactions/delivery/search?latitude=37.786882&longitude=-122.399972", {
+//         method: "get",
+//         headers: new Headers({
+//             "Authorization": "Bearer R7cXrDn0CyoQcZ9AzqBvDrpNx-yAN6ZrI29XvYQKbGPrerdjV3ZszR9R4_5KFOaslWEK6wAv3vVGKKAq-yydOQHeyivS2yCBKEJN_6c2HERr3nhTFd4zPGmENFBKYnYx",
+//             "Content-Type": "application/json"
+//         }),
+//         mode: "no-cors"
+//     })
+//     .then(response => {
+//         return response.json
+//     })
+//     .then(data => {
+//         console.log(data);
+//     })
+    
+// }
+// getRest();
