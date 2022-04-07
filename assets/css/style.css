@@ -36,10 +36,9 @@ h1 {
 }
 
 .form-container {
-    width: 30%;
+    width: 60%;
     text-align: center;
     margin: 10px 5px;
-    
 }
 
 h3 {
@@ -74,12 +73,14 @@ h3 {
 }
 
 /* .btn {
-    width: 75px;
+    width: 200px;
     font-size: 1.0rem;
-    height: 40px;
+    height: 50px;
     margin-top: 12px;
-    border-radius: 10px;
+    border-radius: 15px;
+    margin-left: 200px;
 }
+
 .btn:hover {
     background-color: #a9b8b8;
 } */
@@ -92,6 +93,7 @@ h3 {
 .cuisine-title {
     font-size: 1.3rem;
     letter-spacing: 1px;
+    text-align: center;
 }
 
 .hide {
@@ -103,21 +105,37 @@ h3 {
     padding-top: 10px;
 }
 
+/* button cards for each cuisine */
 .cards {
     flex-direction: row;
     font-size: 1.0rem;
     letter-spacing: 1px;
     border: 1px solid black;
-    height: 50px;
+    height: auto;
     text-align: center;
     width: 70%;
     margin: 10px 3px;
-    padding: 10px 5px;
+    padding: 20px 10px;
     transition: .4s ease-out;
-    border-radius: 10px;
+    border-radius: 20px;
+}
+
+/* Left align the list of restaurants */
+.card-align {
+    text-align: left;
 }
 
 .cards:hover {
     color: white;
     background-color: black;
+}
+
+/* list of restaurants */
+.rest-list {
+    /* border: 1px solid red; */
+    border-radius: 10px;
+    width: 650px;
+    height: auto;
+    margin-left: 100px;
+    margin-bottom: 50px;
 }
