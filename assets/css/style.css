@@ -111,13 +111,18 @@ h3 {
     font-size: 1.0rem;
     letter-spacing: 1px;
     border: 1px solid black;
-    height: 60px;
+    height: auto;
     text-align: center;
     width: 70%;
     margin: 10px 3px;
-    padding: 10px 5px;
+    padding: 20px 10px;
     transition: .4s ease-out;
-    border-radius: 10px;
+    border-radius: 20px;
+}
+
+/* Left align the list of restaurants */
+.card-align {
+    text-align: left;
 }
 
 .cards:hover {
@@ -130,7 +135,7 @@ h3 {
     border: 1px solid red;
     border-radius: 10px;
     width: 650px;
-    height: 300px;
+    height: auto;
     margin-left: 100px;
     margin-bottom: 50px;
 }
