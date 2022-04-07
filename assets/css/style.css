@@ -36,10 +36,9 @@ h1 {
 }
 
 .form-container {
-    width: 30%;
+    width: 60%;
     text-align: center;
     margin: 10px 5px;
-    
 }
 
 h3 {
@@ -94,6 +93,7 @@ h3 {
 .cuisine-title {
     font-size: 1.3rem;
     letter-spacing: 1px;
+    text-align: center;
 }
 
 .hide {
@@ -132,7 +132,7 @@ h3 {
 
 /* list of restaurants */
 .rest-list {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     border-radius: 10px;
     width: 650px;
     height: auto;

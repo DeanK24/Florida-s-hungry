@@ -1,13 +1,11 @@
 var cuisineList = document.querySelector(".cuisine-list-container");
 var cuisineCards = document.querySelector(".cuisine-card");
-var americanBtn = document.getElementById("american");
-var asianBtn = document.getElementById("asian");
-var italianBtn = document.getElementById("italian");
-var latinBtn = document.getElementById("latin");
-var medBtn = document.getElementById("med");
+var jacksonvilleBtn = document.getElementById("jacksonville");
+var orlandoBtn = document.getElementById("orlando");
+var miamiBtn = document.getElementById("miami");
+var tallahasseeBtn = document.getElementById("tallahassee");
+var tampaBtn = document.getElementById("tampa");
 var restList = document.querySelector(".rest-list");
-var listContainer = document.getElementById("list-of-rest");
-var listContainerEl = document.getElementById("list-container");
 
 
 
@@ -19,34 +17,34 @@ function getList() {
 }
 
 // Submit btn for each cuisine
-americanBtn.addEventListener("click", function() {
-    console.log("clicked american");
+jacksonvilleBtn.addEventListener("click", function() {
+    console.log("clicked Jacksonville");
     restList.classList.remove("hide");
 })
 
-asianBtn.addEventListener("click", function() {
-    console.log("clicked asian");
+orlandoBtn.addEventListener("click", function() {
+    console.log("clicked Orlando");
     restList.classList.remove("hide");
 })
 
-italianBtn.addEventListener("click", function() {
-    console.log("clicked italian");
+miamiBtn.addEventListener("click", function() {
+    console.log("clicked Miami");
     restList.classList.remove("hide");
 })
 
-latinBtn.addEventListener("click", function() {
-    console.log("clicked latin");
+tallahasseeBtn.addEventListener("click", function() {
+    console.log("clicked Tallahassee");
     restList.classList.remove("hide");
 })
 
-medBtn.addEventListener("click", function() {
-    console.log("clicked mediterranean");
+tampaBtn.addEventListener("click", function() {
+    console.log("clicked tampa");
     restList.classList.remove("hide");
 })
 
 
 var getFood = function() {
-    var apiTampa = 'https://travel-advisor.p.rapidapi.com/restaurants/list-by-latlng?latitude=27.9506&longitude=-82.4572&limit=30&currency=USD&distance=20&open_now=false&lang=en_US&min_rating=5';
+    var apiTampa = 'https://travel-advisor.p.rapidapi.com/restaurants/list-by-latlng?latitude=27.9506&longitude=-82.4572&limit=10&currency=USD&distance=20&open_now=false&lang=en_US&min_rating=5';
 
     var apiJax = 'https://travel-advisor.p.rapidapi.com/restaurants/list-by-latlng?latitude=30.3322&longitude=-81.6557&limit=30&currency=USD&distance=20&open_now=false&lang=en_US&min_rating=5';
 
@@ -64,77 +62,28 @@ var getFood = function() {
         .then(response => {
             console.log(response)
 
+            let listdata = response.data;
+            listdata.forEach(restaurant => {
+                console.log(restaurant);
 
-            for (var i = 0; i < 10; i++) {
-                var restData = {
-                    name: response.data[i].name,
-                    address: response.data[i].address,
-                    rating: response.data[i].rating,
-                    num_reviews: response.data[i].num_reviews,
-                    phone: response.data[i].phone
-                };
-
-                var dataContent = `<div class="cards card-align">
-                                <div>Name:&#160 ${restData.name} </div>
-                               <div>Address:&#160 ${restData.address}</div>
-                               <div>Phone:&#160 ${restData.phone}</div>`;
-
-                var dataCard = document.getElementById("card-name-1");
-
-                // narrowing down the data we need: console.log() for name, rating, reviews
-                if (restData.num_reviews >= 1 && restData.rating >= 4.0) {
-                    console.log(restData.name + "," + restData.rating +"," + restData.num_reviews);
-                };
-                
-                dataCard.innerHTML = dataContent;  
-
-                // document.getElementById("card-" + i).innerHTML =
-                //             `<div class="cards">
-                //                 <div>Name:  </div>
-                //                 <div>Address: </div>`;
-                
-
-                // var node = document.createElement("li")
-                // var textNode = document.createTextNode(restData.name)
-                // node.appendChild(textNode)
-                // listContainer.appendChild(node);
-            }   
+                if (restaurant.num_reviews >= 1 && restaurant.rating >= 4.0) {
+                        document.querySelector(".rest-list").innerHTML +=  
+                            `<div class="cards card-align">
+                            <div>Name:&#160 ${restaurant.name} </div>
+                            <div>Address:&#160 ${restaurant.address}</div>
+                            <div>Phone:&#160 ${restaurant.phone}</div>
+                            </div>`;    
+                        };
+  
+            }); 
+               
         })
         .catch(err => console.error(err));
+
+
 }
-    //fetch Jacksonville API    
-    // fetch(apiJax, options)
-    //     .then(response => response.json())
-    //     .then(response => {
-    //         console.log(response)
-    //         for (var i = 0; i < 5; i++) {
-    //             var node = document.createElement("li")
-    //             var textNode = document.createTextNode(response.data[i].name)
-    //             node.appendChild(textNode)
-    //             listContainer.appendChild(node);
-    //         }
-    //     })
-    //     .catch(err => console.error(err));
+
     
 getFood();
 
 
-
-// var getRest = function (){
-//     fetch("https://api.yelp.com/v3/transactions/delivery/search?latitude=37.786882&longitude=-122.399972", {
-//         method: "get",
-//         headers: new Headers({
-//             "Authorization": "Bearer R7cXrDn0CyoQcZ9AzqBvDrpNx-yAN6ZrI29XvYQKbGPrerdjV3ZszR9R4_5KFOaslWEK6wAv3vVGKKAq-yydOQHeyivS2yCBKEJN_6c2HERr3nhTFd4zPGmENFBKYnYx",
-//             "Content-Type": "application/json"
-//         }),
-//         mode: "no-cors"
-//     })
-//     .then(response => {
-//         return response.json
-//     })
-//     .then(data => {
-//         console.log(data);
-//     })
-    
-// }
-// getRest();
