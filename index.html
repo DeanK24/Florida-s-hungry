@@ -19,16 +19,7 @@
             <h3>Welcome to Florida's Hungry</h3>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit perferendis quae magni reiciendis optio ad quod dolore laboriosam suscipit dolorum ipsum, odio quas libero? Est molestias blanditiis nulla enim voluptas!</p>
         </div>
-        <!-- <div class="select-drop">
-            <select name="city-box" id="cityList" onchange="getList()">
-                <option>Select a city to eat!</option>
-                <option class="drop" value="Tampa">&#160Tampa</option>
-                <option class="drop" value="Orlando">&#160Orlando</option>
-                <option class="drop" value="Miami">&#160Miami</option>
-                <option class="drop" value="Tallahassee">&#160Tallahassee</option>
-                <option class="drop" value="Jacksonville">&#160Jacksonville</option>
-            </select>
-        </div> -->
+
     </main>
     <div class="cuisine-list-container">
         <h4 class="cuisine-title">Select a city to eat!</h4>
@@ -39,7 +30,10 @@
             <button class="cards" id="tallahassee">Tallahassee</button>
             <button class="cards" id="tampa">Tampa</button>
         </div>
-        
+    
+    <div>
+        <input type="button" onclick="clearRestaurants()" value="Clear Restaurants">
+    </div>
     </div>
     <div class="rest-list hide" id="list-container">
         <!-- <ul id="list-of-rest"></ul> -->
@@ -54,6 +48,8 @@
             <div id="card-name-9"></div>
             <div id="card-name-10"></div>
     </div>
+
+    
 
     <script src="./assets/js/script.js"></script>
 </body>
