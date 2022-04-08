@@ -49,11 +49,12 @@ h3 {
     height: 35px;
     padding-top: 10px;
     color: black;
-    text-shadow: 0 0 30px #15191b, 0 0 5px #92a0a0;
+    text-shadow: 0 0 30px #15191b, 0 0 5px #ffffff;
+    margin-bottom: 20px;
 }
 
 
-.select-drop {
+/* .select-drop {
     padding: 5px;
     width: 60%;
     position: relative;
@@ -61,16 +62,16 @@ h3 {
     text-shadow: 0 0 30px #1b1b15, 0 0 5px #fdfa53;
     margin-top: -10px;
     display: inline;
-}
+} */
 
-.select-drop select {
+/* .select-drop select {
     height: 45px;
     width: 100%;
     font-size: 1.3rem;
     margin-top: 15px;
     border-radius: 10px;
     letter-spacing: .5px;
-}
+} */
 
 /* .btn {
     width: 200px;
@@ -103,6 +104,7 @@ h3 {
 .cuisine-card {
     display: flex;   
     padding-top: 10px;
+    margin-bottom: 50px;
 }
 
 /* button cards for each cuisine */
