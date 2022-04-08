@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /* border: 1px solid blue; */
+
+}
+
+header {
+    background-image: url("../images/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+body {
+    background-color: #eaeff3;
+
+}
+
+h1 {
+    color: white;
+    margin: 100px;
+    margin-left: 300px;line-height: 1.25;
+    padding: 0 10px;
+    display: inline-block;
+    font-size: 3rem;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    text-shadow: 0 0 30px #1b1b15, 0 0 5px #fdfa53;
+}
+
+.container {
+    display: flex;
+    padding: 0px 50px;
+    justify-content:space-around;
+    margin-top: 50px;
+}
+
+.form-container {
+    width: 60%;
+    text-align: center;
+    margin: 10px 5px;
+}
+
+h3 {
+    font-size: 1.5rem; 
+    letter-spacing: 2px;
+    font-weight: lighter;
+    border-radius: 10px;
+    height: 35px;
+    padding-top: 10px;
+    color: black;
+    text-shadow: 0 0 30px #15191b, 0 0 5px #92a0a0;
+}
+
+
+.select-drop {
+    padding: 5px;
+    width: 60%;
+    position: relative;
+    color: white;
+    text-shadow: 0 0 30px #1b1b15, 0 0 5px #fdfa53;
+    margin-top: -10px;
+    display: inline;
+}
+
+.select-drop select {
+    height: 45px;
+    width: 100%;
+    font-size: 1.3rem;
+    margin-top: 15px;
+    border-radius: 10px;
+    letter-spacing: .5px;
+}
+
+/* .btn {
+    width: 200px;
+    font-size: 1.0rem;
+    height: 50px;
+    margin-top: 12px;
+    border-radius: 15px;
+    margin-left: 200px;
+}
+
+.btn:hover {
+    background-color: #a9b8b8;
+} */
+
+.cuisine-list-container {
+    margin: 50px 75px;
+    font-size: 1.5rem;
+}
+
+.cuisine-title {
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.hide {
+    display: none;
+}
+
+.cuisine-card {
+    display: flex;   
+    padding-top: 10px;
+}
+
+/* button cards for each cuisine */
+.cards {
+    flex-direction: row;
+    font-size: 1.0rem;
+    letter-spacing: 1px;
+    border: 1px solid black;
+    height: auto;
+    text-align: center;
+    width: 70%;
+    margin: 10px 3px;
+    padding: 20px 10px;
+    transition: .4s ease-out;
+    border-radius: 20px;
+}
+
+/* Left align the list of restaurants */
+.card-align {
+    text-align: left;
+}
+
+.cards:hover {
+    color: white;
+    background-color: black;
+}
+
+/* list of restaurants */
+.rest-list {
+    /* border: 1px solid red; */
+    border-radius: 10px;
+    width: 650px;
+    height: auto;
+    margin-left: 100px;
+    margin-bottom: 50px;
+}
