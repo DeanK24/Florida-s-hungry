@@ -1,40 +1,14 @@
 # Florida-s-hungry
 
-## Temporary notes:
-Use a CSS framework other than Bootstrap.
-
-Be deployed to GitHub Pages.
-
-Be interactive (i.e: accept and respond to user input).
-
-Use at least two server-side APIs.
-
-Does not use alerts, confirms, or prompts (use modals).
-
-Use client-side storage to store persistent data.
-
-Be responsive.
-
-Have a polished UI.
-
-Have a clean repository that meets quality coding standards (file structure, naming conventions, follows best practices for class/id-naming conventions, indentation, quality comments, etc.).
-
-Have a quality README (with unique name, description, technologies used, screenshot, and link to deployed application).
-
-Finally, You must add your project to the portfolio that you created in Module 2.
+## Description:
+This collaborative project was to create a real-world front-end application.  Florida's Hungry was created with HTML, CSS, and Javascript.  The application utilizes two server-side APIs:  1. Travel-advisor API to gather restaurant data for a specific city, and 2. Open Weather API to gather weather data for the selected city.  Users will select a Florida city to eat from.  Upon selection, a map and weather data will display, along with a populated list of restaurants to try.
 
 
-## Presentation:
-Powerpoint presenation:  address the following:
+### Link to Florida's Hungry:
 
-Elevator pitch: A one-minute description of your application.
 
-Concept: What is your user story? What was your motivation for development?
+### Collaborators:
+ThuyTTTN, DeanK24, and Sriley92
 
-Process: What were the technologies used? How were tasks and roles broken down and assigned? What challenges did you encounter? What were your successes?
+#### Screenshots of Florida's Hungry
 
-Demo: Show your stuff!
-
-Directions for future development.
-
-Links to the deployed application and the GitHub repository.
