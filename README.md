@@ -12,3 +12,6 @@ ThuyTTTN, DeanK24, and Sriley92
 
 #### Screenshots of Florida's Hungry
 
+![screencapture-file-Florida-s-hungry](https://user-images.githubusercontent.com/92459709/162556131-5f7c0dca-a280-4af1-8cbe-8585ebc6d2a7.png)
+
+![screencapture-file2-Florida-s-hungry](https://user-images.githubusercontent.com/92459709/162556136-5142f44c-0b72-4598-88c4-1f2bcc311958.png)
