@@ -14,7 +14,6 @@ jacksonvilleBtn.addEventListener("click", function() {
     getJaxFood();
     restList.classList.remove("hide");
     document.querySelector(".map").innerHTML = `<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d440729.51651678846!2d-81.9632966213798!3d30.345283956447123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e5b716f1ceafeb%3A0xc4cd7d3896fcc7e2!2sJacksonville%2C%20FL!5e0!3m2!1sen!2sus!4v1649385488166!5m2!1sen!2sus" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`;
-    weather();
     
 })
 
@@ -98,65 +97,44 @@ var Cities = function(latitude, longitude) {
                             };
                 });
 
-                var apiUrl2 = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&units=imperial&exclude=minutely,hourly,alerts&appid=7f371e4052b1c98d236355c1a3d79224
-                `;
+                var apiUrl2 = 'https://api.openweathermap.org/data/2.5/onecall?lat='+latitude+'&lon='+longitude+'&units=imperial&exclude=minutely,hourly,alerts&appid=7f371e4052b1c98d236355c1a3d79224'
+                ;
 
-    //make a request to the url for the lat/lon
-    fetch(apiUrl2)
-    .then(response => response.json())
-    .then(response => {
-        console.log(response) 
-                
-                var weatherData = {
-                    temp:  data.daily[i].temp.day,
-                    humidity: data.daily[i].humidity,
-                    icon: data.current.weather[0].icon
-                };
+                    //make a request to the url for the lat/lon
+                    fetch(apiUrl2)
+                    .then(response => response.json())
+                    .then(response => {
+                        console.log(response.current); 
+                            
+                        var weatherBox = document.querySelector(".weather-box");
 
-                console.log(weatherData);
+                            const {temp, wind_speed, humidity, uvi} = response.current;
+                            const {icon} = response.current.weather[0];
 
-                document.querySelector(".weather").innerHTML = `<div class="weatherInfo">
-                <div class="w-icon"><img src="https://openweathermap.org/img/w/${weatherData.icon}.png"></div>
-                <div class="weatherInfo">
-                <div>Temp: ${weatherData.temp}°F</div>
-                <div>Humidity: ${weatherData.humidity}%</div>
-                </div>`;
-                
-            }) 
+                            console.log(temp, wind_speed, humidity, uvi, icon);
+
+                                weatherBox.innerHTML = `<div class="w-box">
+                                                        <div><img src="https://openweathermap.org/img/w/${icon}.png"></div>
+                                                        <div class="weatherInfo">
+                                                        <div>Temp: ${temp}°F</div>
+                                                        <div>Humidity: ${humidity}%</div>
+                                                        <div>Wind: ${wind_speed}%</div>
+                                                        <div>Uvi: ${uvi}%</div>
+                                                        </div>`;
+                                
+                            }) 
                    
             })
             .catch(err => console.error(err));
-
-    
-    
-            
+      
 }
 
-var weather = function(latitude, longitude) {
-    // var apiUrl2 = 'https://api.openweathermap.org/data/2.5/onecall?lat='+latitude+'&lon='+longitude+'&units=imperial&exclude=minutely,hourly,alerts&appid=bca8293decaae48c0b87f88d0d58a91f';
 
-    // //make a request to the url for the lat/lon
-    // fetch(apiUrl2)
-    // .then(response => response.json())
-    // .then(response => {
-    //     console.log(response) 
-                
-    //             var weatherData = {
-    //                 temp:  data.daily[i].temp.day,
-    //                 humidity: data.daily[i].humidity,
-    //                 icon: data.current.weather[0].icon
-    //             };
-
-    //             console.log(weatherData);
-
-    //             document.querySelector(".weather").innerHTML = `<div class="weatherInfo">
-    //             <div class="w-icon"><img src="https://openweathermap.org/img/w/${weatherData.icon}.png"></div>
-    //             <div class="weatherInfo">
-    //             <div>Temp: ${weatherData.temp}°F</div>
-    //             <div>Humidity: ${weatherData.humidity}%</div>
-    //             </div>`;
-                
-    //         })
-        
-    
-}
+// `<div class="weatherInfo">
+//                                 <div class="w-icon"><img src="https://openweathermap.org/img/w/${icon}.png"></div>
+//                                 <div class="weatherInfo">
+//                                 <div>Temp: ${temp}°F</div>
+//                                 <div>Humidity: ${humidity}%</div>
+//                                 <div>Wind: ${wind}%</div>
+//                                 <div>Uvi: ${uvi}%</div>
+//                                 </div>`
