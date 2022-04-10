@@ -1,6 +1,6 @@
 * {
     margin: 0;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
     /* border: 1px solid blue; */
 
 }
@@ -23,6 +23,7 @@ h1 {
     padding: 0 10px;
     display: inline-block;
     font-size: 3rem;
+    font-weight: bold;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: black;
     text-shadow: 0 0 30px #1b1b15, 0 0 5px #fdfa53;
@@ -44,16 +45,21 @@ h1 {
 h3 {
     font-size: 1.5rem; 
     letter-spacing: 2px;
-    font-weight: lighter;
+    font-weight: bold;
     border-radius: 10px;
     height: 35px;
     padding-top: 10px;
     color: black;
-    text-shadow: 0 0 30px #15191b, 0 0 5px #92a0a0;
+    text-shadow: 0 0 30px #15191b, 0 0 5px #ffffff;
+    margin-bottom: 20px;
+}
+
+p {
+    line-height: 1.5;
 }
 
 
-.select-drop {
+/* .select-drop {
     padding: 5px;
     width: 60%;
     position: relative;
@@ -61,16 +67,16 @@ h3 {
     text-shadow: 0 0 30px #1b1b15, 0 0 5px #fdfa53;
     margin-top: -10px;
     display: inline;
-}
+} */
 
-.select-drop select {
+/* .select-drop select {
     height: 45px;
     width: 100%;
     font-size: 1.3rem;
     margin-top: 15px;
     border-radius: 10px;
     letter-spacing: .5px;
-}
+} */
 
 /* .btn {
     width: 200px;
@@ -85,27 +91,31 @@ h3 {
     background-color: #a9b8b8;
 } */
 
-.cuisine-list-container {
+
+.city-list-container {
     margin: 50px 75px;
-    font-size: 1.5rem;
+    
 }
 
-.cuisine-title {
+h4 {
     font-size: 1.3rem;
     letter-spacing: 1px;
     text-align: center;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    
 }
 
 .hide {
     display: none;
 }
 
-.cuisine-card {
+.city-card {
     display: flex;   
     padding-top: 10px;
+    margin-bottom: 50px;
 }
 
-/* button cards for each cuisine */
+/* button cards for each city */
 .cards {
     flex-direction: row;
     font-size: 1.0rem;
@@ -113,16 +123,13 @@ h3 {
     border: 1px solid black;
     height: auto;
     text-align: center;
-    width: 70%;
+    width: 60%;
     margin: 10px 3px;
-    padding: 20px 10px;
+    padding: 10px 10px;
     transition: .4s ease-out;
-    border-radius: 20px;
-}
-
-/* Left align the list of restaurants */
-.card-align {
-    text-align: left;
+    border-radius: 40px;
+    box-shadow: 0 5px 10px #0006;
+    
 }
 
 .cards:hover {
@@ -130,12 +137,51 @@ h3 {
     background-color: black;
 }
 
-/* list of restaurants */
+/* Left align the list of restaurants */
+.card-align {
+    text-align: left;
+}
+
+/* list of restaurants-Container */
 .rest-list {
     /* border: 1px solid red; */
     border-radius: 10px;
-    width: 650px;
+    width: 80%;
     height: auto;
     margin-left: 100px;
     margin-bottom: 50px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* List of restaurants cards */
+.cards2 {
+    background-color: #ffffff;
+    border: 1px solid rgb(194, 188, 188);
+    border-radius: 3px;
+    height: 200px;
+    width: 175px;
+    padding: 20px;
+    margin: 20px;
+    line-height: 1.6;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+    border-top: 5px solid rgb(165, 11, 11);
+}
+
+.cards2:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+    transform: scale(1.1);
+}
+
+.text {
+    font-size: 0.8rem;
+}
+
+
+
+/* map section */
+.map {
+    margin-left: 50px;
 }
