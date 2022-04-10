@@ -4,12 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link rel="stylesheet" href="./assets/css/style.css">
-
     <title>Florida's Hungry</title>
-    
 </head>
+
 <body>
     <header>
         <h1 class="title">Florida's Hungry</h1>
@@ -17,44 +15,31 @@
     <main class="container">
         <div class="form-container">
             <h3>Welcome to Florida's Hungry</h3>
-            <p>Hungry and too many options to choose from?  Let us pick the best rated restaurants for you.  Select a city below to start your food adventure. </p>
+            <p>Hungry and too many options to choose from?  Let us help narrow the selections down for you.  Select a city below to start your foodie adventure.</p>
         </div>
-        <!-- <div class="select-drop">
-            <select name="city-box" id="cityList" onchange="getList()">
-                <option>Select a city to eat!</option>
-                <option class="drop" value="Tampa">&#160Tampa</option>
-                <option class="drop" value="Orlando">&#160Orlando</option>
-                <option class="drop" value="Miami">&#160Miami</option>
-                <option class="drop" value="Tallahassee">&#160Tallahassee</option>
-                <option class="drop" value="Jacksonville">&#160Jacksonville</option>
-            </select>
-        </div> -->
     </main>
     <div class="city-list-container">
-        <h4>Select a city to eat!</h4>
+        <h4>Select a City to Eat!</h4>
         <div class="city-card hide">
-            <button class="cards" id="jacksonville">Jacksonville</button>
+            <button class="cards" id="jacksonville" value="jacksonville">Jacksonville</button>
             <button class="cards" id="orlando">Orlando</button>
             <button class="cards" id="miami">Miami</button>
             <button class="cards" id="tallahassee">Tallahassee</button>
             <button class="cards" id="tampa">Tampa</button>
         </div>
-        <div class="map"></div>
-        <div class="weather">
-            
+    </div>
+    <div class = "city-container2">
+        <div class="input-container">
+            <input type="text" id="input-box" placeholder="City">
         </div>
     </div>
+    <div class="map-weather hide">
+        <div class="map"></div>
+        <div class="weather-box hide"></div>
+    </div>
+    <h4 class="list hide">List of Restaurants to Try:</h4>
     <div class="rest-list hide" id="list-container">
-        <!-- <ul id="list-of-rest"></ul> -->
-            <!-- <div id="card-name-1" class="list-card-container"></div>
-            <div id="card-name-2" class="list-card-container"></div>
-            <div id="card-name-3" class="list-card-container"></div>
-            <div id="card-name-4" class="list-card-container"></div>
-            <div id="card-name-5" class="list-card-container"></div>
-            <div id="card-name-6" class="list-card-container"></div>
-            <div id="card-name-7" class="list-card-container"></div>
-            <div id="card-name-8" class="list-card-container"></div>
-            <div id="card-name-9" class="list-card-container"></div> -->
+        
     </div>
 
     <script src="./assets/js/script.js"></script>
